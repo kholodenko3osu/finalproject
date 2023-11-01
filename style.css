@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+html{
+    font-size:10px;
+}
+
+.intro {
+
+    color: rgb(51, 48, 42);
+    font-size: 2em;
+    text-justify:inter-cluster;
+    font-family:cursive;
+    text-align:center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+}
+
+/* from https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+
+.glow {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  /* from https://foolishdeveloper.com/flashlight-effect-html-css/ */
+
+  .wrapper {
+    height: 100vh;
+    background-image: url('https://cs4.pikabu.ru/post_img/big/2016/05/14/11/1463253214123152134.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  .shadow {
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-image: radial-gradient(circle at center, transparent, #000 20%);
+  }
