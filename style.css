@@ -2,7 +2,8 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    background-color: black;
+    background-color: rgb(0,0,0);
+    color: rgb(51, 48, 42);
 }
 
 html{
@@ -10,11 +11,10 @@ html{
 }
 
 .intro {
-
     color: rgb(51, 48, 42);
-    font-size: 2em;
+    font-size: 1em;
     text-justify:inter-cluster;
-    font-family:cursive;
+    font-family:Georgia, 'Times New Roman', Times, serif   ;
     text-align:center;
     text-indent: 50px;
     white-space: pre;
@@ -22,41 +22,95 @@ html{
     border: 0;
 }
 
-/* from https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+.generic {
+  color: rgb(51, 48, 42);
+  font-size: 1em;
+  text-justify:inter-cluster;
+  font-family:Georgia, 'Times New Roman', Times, serif   ;
+  text-indent: 50px;
+  white-space: pre;
+  word-break: break-word;
+  border: 0;
+}
 
-.glow {
-    font-size: 2em;
+/* from https://www.w3schools.com/howto/howto_css_glowing_text.asp: */
+
+.glowbronze {
+    font-size: 1em;
     color: #fff;
     text-align: center;
-    -webkit-animation: glow 3s ease-in-out infinite alternate;
-    -moz-animation: glow 3s ease-in-out infinite alternate;
-    animation: glow 3s ease-in-out infinite alternate;
+    -webkit-animation: glowbronze 1.5s ease-in-out infinite alternate;
+    -moz-animation: glowbronze 1.5s ease-in-out infinite alternate;
+    animation: glowbronze 1.5s ease-in-out infinite alternate;
+    z-index: 20;
   }
-  
-  @-webkit-keyframes glow {
+
+  @-webkit-keyframes glowbronze {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #fff, 0 0 30px #ffd600, 0 0 40px #daa520, 0 0 50px #d4af37, 0 0 60px #cfb53b, 0 0 70px #e2b13c;
     }
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      text-shadow: 0 0 20px #fff, 0 0 30px #796832, 0 0 40px #e1ad21, 0 0 50px #796832, 0 0 60px #a28834, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
   }
 
-  /* from https://foolishdeveloper.com/flashlight-effect-html-css/ */
-
-  .wrapper {
-    height: 100vh;
-    background-image: url('https://cs4.pikabu.ru/post_img/big/2016/05/14/11/1463253214123152134.jpg');
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+.glowblue {
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glowblue 3s ease-in-out infinite alternate;
+    -moz-animation: glowblue 3s ease-in-out infinite alternate;
+    animation: glowblue 3s ease-in-out infinite alternate;
   }
-  .shadow {
+
+  @-webkit-keyframes glowblue {
+    from {
+      text-shadow: 0 0 10px #006bc6, 0 0 20px #4169e1, 0 0 30px #0000ff, 0 0 40px #1984df, 0 0 50px #174268, 0 0 60px #cfb53b, 0 0 70px #e2b13c;
+    }
+    to {
+      text-shadow: 0 0 20px #413395, 0 0 30px #3e3769, 0 0 40px #6156a4, 0 0 50px #483d8b, 0 0 60px #4e4583, 0 0 70px #553592, 0 0 80px #333399;
+    }
+  }
+
+.glowred {
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glowred 0.75s ease-in-out infinite alternate;
+    -moz-animation: glowred 0.75s ease-in-out infinite alternate;
+    animation: glowred 0.75s ease-in-out infinite alternate;
+    z-index: 20;
+  }
+  
+  @-webkit-keyframes glowred {
+    from {
+      text-shadow: 0 0 10px #808080, 0 0 20px #ec5353, 0 0 30px #e61919, 0 0 40px #b81414, 0 0 50px #ff2400, 0 0 60px #ff2800, 0 0 70px #f70d1a;
+    }
+    to {
+      text-shadow: 0 0 20px #ff5500, 0 0 30px #ff4500, 0 0 40px #f35f1b, 0 0 50px #dd6731, 0 0 60px #ba4f1e, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  /* from https://codingartistweb.com/2022/09/flashlight-effect-with-javascript/: */
+
+  #flashlight {
+    --Xpos: 50vw;
+    --Ypos: 50vh;
+  }
+  #flashlight:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    width: 200vw;
-    height: 200vh;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background-image: radial-gradient(circle at center, transparent, #000 20%);
+    background: radial-gradient(
+      circle 7.5em at var(--Xpos) var(--Ypos),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)
+    );
+  }
+  @media screen and (min-width: 800px) {
+    body {
+      font-size: 24px;
+    }
   }
