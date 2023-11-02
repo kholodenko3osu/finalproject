@@ -44,15 +44,25 @@ function protectpasscode() {
      } else if (result == passweekly) {
         window.location.replace("MainWeekly.html");
      } else if (result == passbaubles) {
-      window.location.replace("ravenTwo.html");
+      window.location.replace("MainBaubles.html");
    } else if (result == passabsolution) {
-    window.location.replace("ravenTwo.html");
+    window.location.replace("MainAbsolution.html");
  }   else if (result == passozymandias) {
   window.location.replace("https://www.poetryfoundation.org/poems/46565/ozymandias", "_blank");
 }  else {
-        alert("I cannot. Try lowecase.");
+        alert("I cannot. Try lowercase.");
         location.reload();
      }
   }
 }
 
+function bloodNarrator() {
+  var audio = new Audio('bloodnarration.mp3');
+  audio.play();
+  setTimeout(home, 6000);
+}
+
+function home() {
+  window.location.replace("MainFirst.html")
+
+}

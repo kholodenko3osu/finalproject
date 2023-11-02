@@ -35,6 +35,11 @@ html{
   border: 0;
 }
 
+#video{
+ margin: 0 auto;
+ display: block;
+}
+
 .galaxy {
   background-image: url('galaxy.gif'); 
   color: rgb(238, 238, 238);
@@ -127,12 +132,31 @@ html{
     }
   }
 
+  .glowtrans {
+    font-size: 1em;
+    color: #fff;
+    -webkit-animation: glowtrans 0.5s ease-in-out infinite alternate;
+    -moz-animation: glowtrans 0.5s ease-in-out infinite alternate;
+    animation: glowtrans 0.5s ease-in-out infinite alternate;
+    z-index: 20;
+  }
+
+  @-webkit-keyframes glowtrans {
+    from {
+      text-shadow: 0 0 10px #3399ff, 0 0 20px #3f00ff, 0 0 30px #5353ec, 0 0 40px #8cadf2, 0 0 50px #6495ed, 0 0 60px #477beb, 0 0 70px #6fa2ff;
+    }
+    to {
+      text-shadow: 0 0 20px #ffb6c1, 0 0 30px #f7bfbe, 0 0 40px #f2bdcd, 0 0 50px #f8bdc6, 0 0 60px #ef6f82, 0 0 70px #ff4da6, 0 0 80px #ffadbb;
+    }
+  }
+
   /* from https://codingartistweb.com/2022/09/flashlight-effect-with-javascript/: */
 
   #flashlight {
     --Xpos: 50vw;
     --Ypos: 50vh;
   }
+
   #flashlight:before {
     content: "";
     display: block;
