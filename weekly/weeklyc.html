@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    function protectpasscode() {
+        const result = document.getElementById("12345").value;
+        let passcode = 12345;
+        let space = '';
+        if (result == space) {
+           alert("Type passcode")
+        } else {
+           if (result == passcode) {
+            document.getElementById("top").scrollIntoView();
+           } else {
+              alert("Incorrect Passcode");
+           }
+        }
+     }
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly: C</title>
+    
+    
+
+</head>
+<body>
+    <pre id="top">Unfortunately, I forgot to do weekly b.
+                                                        <a href="#down">Whoops.</a>
+    </pre>
+
+<div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<p id="down">Aaaaaaanyways, these past few weeks I've been messing with adding JavaScript into my code (usually in a separate file, but sometimes I just use the script tag.). I had initially thought that JavaScript was pretty much the same thing as Java, but I was pretty far off. Still, it hasn't been too difficult to learn - especially with the help of online resources.</p>
+<p>I attempted to utilize JavaScript for our first big assignment, with mixed results. HTML's lack of variables and ability to do much on its own (especially without a server) means that JS is doing some of the heavier lifting in terms of coding.</p>
+<p>It's pretty cool to see three different programming languages tackling three different areas all at the same time: HTML helps with layout, positioning, and linking, CSS helps with styling, and JS allows for greater user interactivity.</p>
+<p>It's also fun to see how the programming languages interact with each other, and how they perform the same operations in different ways. For instance, Linking to the top of a page in HTML is as simple as adding an < a > tag and href to another part of the page with a specific ID or class. </p>
+<p>Javascript is pretty similar; it uses "document.getElementById("ID here")", where you can put the same ID into the parantheses. This allows the code to focus in on the specific part with that ID; then, if one wishes to scroll there, they can add ".scrollIntoView()" to the end of the code to scroll.</p>
+<p>I'm sure you can also do other things that require referencing specific elements by ID (maybe changing color, adding new effects, etc.). I can already imagine the uses one might have for this in connection to CSS.</p>
+<p>For my next project, I want to experiment with making puzzles and passwords to unlock different versions/interpretations of a poem. In true programmer fashion, I've successfully "repurposed" code from somewhere else and have been experimenting with how to implement it.</p>
+<p>I'm also experimenting with CSS styling and Javascript functions together. I want to see what effects I can make and if there's anything particularly cool I can accomplish.</p>
+<hr>
+<li>Credit for JS Password Creator: <a href="https://www.tutorialspoint.com/how-to-password-protect-a-page-using-only-html-css-and-javascript" target="_blank" rel="noopener noreferrer">https://www.tutorialspoint.com/how-to-password-protect-a-page-using-only-html-css-and-javascript</a> </li>
+<li>Code Obfuscator (I plan on using this to make puzzles harder to decipher just by looking at my JS Code): <a href="https://obfuscator.io" target="_blank" rel="noopener noreferrer">https://obfuscator.io</a></li>
+<br><br>    
+<input type="password" placeholder="passcode" id="12345">
+<button onclick="protectpasscode()">Input "12345" to go to the top!</button>
+
+</body>
+</html>

@@ -2,10 +2,13 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    background-color: rgb(0,0,0);
     color: rgb(51, 48, 42);
 }
 
+body{
+     background-color: rgb(0,0,0);
+
+}
 html{
     font-size:10px;
 }
@@ -15,7 +18,6 @@ html{
     font-size: 1em;
     text-justify:inter-cluster;
     font-family:Georgia, 'Times New Roman', Times, serif   ;
-    text-align:center;
     text-indent: 50px;
     white-space: pre;
     word-break: break-word;
@@ -33,12 +35,38 @@ html{
   border: 0;
 }
 
+.galaxy {
+  background-image: url('galaxy.gif'); 
+  color: rgb(238, 238, 238);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+.blood {
+  background-image: url('bloodgalaxy.gif'); 
+  color: rgb(238, 238, 238);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  cursor: grabbing;
+}
+
+#container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
 /* from https://www.w3schools.com/howto/howto_css_glowing_text.asp: */
 
 .glowbronze {
     font-size: 1em;
     color: #fff;
-    text-align: center;
     -webkit-animation: glowbronze 1.5s ease-in-out infinite alternate;
     -moz-animation: glowbronze 1.5s ease-in-out infinite alternate;
     animation: glowbronze 1.5s ease-in-out infinite alternate;
@@ -57,11 +85,20 @@ html{
 .glowblue {
     font-size: 1em;
     color: #fff;
-    text-align: center;
     -webkit-animation: glowblue 3s ease-in-out infinite alternate;
     -moz-animation: glowblue 3s ease-in-out infinite alternate;
     animation: glowblue 3s ease-in-out infinite alternate;
   }
+
+.center{ text-align: center; }
+
+.alignright{ text-align: right; }
+
+.alignleft{ text-align: left; }
+
+.hidden {display: none; }
+
+
 
   @-webkit-keyframes glowblue {
     from {
@@ -75,7 +112,6 @@ html{
 .glowred {
     font-size: 1em;
     color: #fff;
-    text-align: center;
     -webkit-animation: glowred 0.75s ease-in-out infinite alternate;
     -moz-animation: glowred 0.75s ease-in-out infinite alternate;
     animation: glowred 0.75s ease-in-out infinite alternate;
