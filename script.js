@@ -17,7 +17,7 @@ function fadeOut(el) {
           el.style.display = 'none'; // Hide the element
        }
     }, 50);
-  }, 1000)
+  }, 2500)
 
 }
 fadeOut(element);
