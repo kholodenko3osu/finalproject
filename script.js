@@ -85,6 +85,15 @@ function draw() {
    
 }
 
+// Only activates mouseClicked() function if mouse is over canvas element
+function flashlight() { 
+  if (mouseY > 0) {
+    hover = false;
+  } else {
+    hover = true;
+  }
+}
+
 function mouseClicked() {
   if (hover == true) {
   if (mouseVal == true) {
@@ -96,15 +105,6 @@ print(mouseVal);
 
 mySound.play();
 }
-}
-
-// Only activates mouseClicked() function if mouse is over canvas element
-function flashlight() { 
-  if (mouseY > 0) {
-    hover = false;
-  } else {
-    hover = true;
-  }
 }
 
 function windowResized() {
