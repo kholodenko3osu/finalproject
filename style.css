@@ -24,6 +24,17 @@ html{
     border: 0;
 }
 
+.overlay{
+  opacity:1;
+  background-color:#1b1b1b;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;
+}
+
 .generic {
   color: rgb(51, 48, 42);
   font-size: 1em;

@@ -4,6 +4,24 @@ document.querySelector(".addLinks").addEventListener("keyup", event => {
   event.preventDefault(); // No need to `return false;`.
 });
 
+var element = document.querySelector('.fade-out-element'); 
+function fadeOut(el) {
+  setTimeout(() => {
+    var opacity = 1; // Initial opacity
+    var interval = setInterval(function() {
+       if (opacity > 0) {
+          opacity -= 0.1;
+          el.style.opacity = opacity;
+       } else {
+          clearInterval(interval); // Stop the interval when opacity reaches 0
+          el.style.display = 'none'; // Hide the element
+       }
+    }, 50);
+  }, 1000)
+
+}
+fadeOut(element);
+
 
 // Passcode Protection - passwords: projects, weekly, baubles, absolution. Stop sneaking around here!
 function protectpasscode() {
@@ -45,6 +63,10 @@ function home() {
   window.location.replace("index.html")
 
 }
+
+window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+});
 
 /////////////////////////////////////////
 
