@@ -42,7 +42,7 @@ function bloodNarrator() {
 }
 
 function home() {
-  window.location.replace("MainFirst.html")
+  window.location.replace("index.html")
 
 }
 
