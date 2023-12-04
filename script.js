@@ -1,29 +1,8 @@
-let mouseX = 0;
-let mouseY = 0;
-let flashlight = document.getElementById("flashlight");
-
-//Detect touch device
-const isTouchDevice = () => {
-  try {
-    //We try to create TouchEvent(it would fail for desktops and throw error)
-    document.createEvent("TouchEvent");
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-
-function getMousePosition(e) {
-  mouseX = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
-  mouseY = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
-
-  flashlight.style.setProperty("--Xpos", mouseX + "px");
-  flashlight.style.setProperty("--Ypos", mouseY + "px");
-}
-
-document.addEventListener("mousemove", getMousePosition);
-document.addEventListener("touchmove", getMousePosition);
-
+document.querySelector(".addLinks").addEventListener("keyup", event => {
+  if(event.key !== "Enter") return; // Use `.key` instead.
+  document.querySelector(".linkadd").click(); // Things you want to do.
+  event.preventDefault(); // No need to `return false;`.
+});
 
 
 // Passcode Protection - passwords: projects, weekly, baubles, absolution. Stop sneaking around here!
@@ -65,4 +44,57 @@ function bloodNarrator() {
 function home() {
   window.location.replace("MainFirst.html")
 
+}
+
+/////////////////////////////////////////
+
+var canvas;
+var mySound;
+var mouseVal = false;
+
+function preload() {
+  // Load your audio file
+  mySound = loadSound('flashlight.mp3');
+}
+
+function setup() {
+  canvas = createCanvas (windowWidth, windowHeight+300, WEBGL);
+  canvas.position(0,200);
+
+}
+
+
+function draw() {
+  background(0);
+  let locX = mouseX - width / 2;
+  let locY = (mouseY) - height / 2;
+
+  if (mouseVal == true) {
+    erase();
+    circle(locX, locY, 250);
+    noErase();
+    fill(255,255,255,5);
+    circle(locX, locY, 250);
+    fill(255,255,255,10);
+    circle(locX, locY, 100);
+    
+  } 
+  noStroke();
+   
+}
+
+function mouseClicked() {
+  // Play the audio when the mouse is clicked
+  if (mouseVal == true) {
+      mouseVal = false;
+  } else {
+    mouseVal = true;
+  }
+  print(mouseVal); 
+  mySound.play();
+}
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
