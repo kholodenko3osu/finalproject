@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:10px;
+}
+
+.ravenIntro {
+    background-color: black;
+    color: rgb(51, 48, 42);
+    font-size: 2em;
+    text-justify:inter-cluster;
+    font-family:cursive;
+    text-align:center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+}
+
+.alignLeft {
+    text-align:left;
+}
+
+.alignRight {
+    text-align:right;
+}
+
+.alignCenter {
+    text-align:center;
+}
+
+.ravenOne {
+    background-color: black;
+    color: rgb(221, 152, 23);
+    font-size: 2em;
+    text-justify:inter-cluster;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+}
+
+.ravenTwo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.623), rgb(8, 8, 48), rgb(8, 8, 48), rgb(6, 6, 85), rgb(8, 46, 8));
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-justify:inter-cluster;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+    font-weight: bolder;
+    text-shadow: 0 0 3px #201c1c, 0 0 5px #c8c8ce;
+}
+
+.emphasize {
+    font-size: 1.5em;
+    text-shadow: 0 0 3px #8f0b0b, 0 0 5px #420505;
+}
+
+.ravenThree {
+    background-color: black;
+    color: rgb(138, 10, 10);
+    font-size: 2em;
+    text-justify:inter-cluster;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+}
+
+.ravenFinal {
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(80, 80, 80),rgb(0, 0, 0),rgb(80, 80, 80),rgb(0, 0, 0),rgb(80, 80, 80));
+    color: rgb(87, 96, 180);
+    font-size: 2em;
+    text-justify:inter-cluster;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+}
+
+.wrap {
+    word-wrap: break-word
+}
+
+.buttonStyle {
+    background-color: transparent;
+    color: rgb(138, 107, 49);
+    font-size: 1em;
+    text-justify:inter-cluster;
+    font-family: cursive;
+    text-align: center;
+    text-indent: 50px;
+    white-space: pre;
+    word-break: break-word;
+    border: 0;
+}
+
+.hidden {
+    display: none;
+  }
+
+  .discover:hover + .hidden {
+    display: block;
+    color: rgb(10, 10, 167);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.revealable {
+    display:none;
+}
+
+.buttonStyle:hover + .revealable {
+    display: block;
+        color: rgb(94, 45, 45);
+        height: 100px;
+        width: 500px;
+        background-color: rgb(41, 21, 21);
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        
+}
+
+#para-second {
+    color: chartreuse;
+    font-weight: 600;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.fireOne {
+    background-image: linear-gradient(black, rgb(151, 103, 12))
+}
+
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+  }
+
+  
+.bg {
+    /* The image used */
+    background-image: url("../bloodRain.gif");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+/* . means class, # means ID*/
