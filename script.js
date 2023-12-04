@@ -51,6 +51,7 @@ function home() {
 var canvas;
 var mySound;
 var mouseVal = false;
+var hover = false;
 
 function preload() {
   // Load your audio file
@@ -60,7 +61,6 @@ function preload() {
 function setup() {
   canvas = createCanvas (windowWidth, windowHeight+300, WEBGL);
   canvas.position(0,200);
-
 }
 
 
@@ -77,23 +77,35 @@ function draw() {
     circle(locX, locY, 250);
     fill(255,255,255,10);
     circle(locX, locY, 100);
-    
   } 
+  
+  canvas.mouseOver(flashlight);
+  canvas.mouseOut(flashlight);
   noStroke();
    
 }
 
 function mouseClicked() {
-  // Play the audio when the mouse is clicked
+  if (hover == true) {
   if (mouseVal == true) {
-      mouseVal = false;
-  } else {
-    mouseVal = true;
-  }
-  print(mouseVal); 
-  mySound.play();
+    mouseVal = false;
+} else {
+  mouseVal = true;
+}
+print(mouseVal); 
+
+mySound.play();
+}
 }
 
+// Only activates mouseClicked() function if mouse is over canvas element
+function flashlight() { 
+  if (mouseY > 0) {
+    hover = false;
+  } else {
+    hover = true;
+  }
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
