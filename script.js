@@ -48,7 +48,6 @@ function protectpasscode() {
   window.location.replace("https://www.poetryfoundation.org/poems/46565/ozymandias", "_blank");
 }  else {
         alert("I cannot. Try lowercase.");
-        location.reload();
      }
   }
 }
