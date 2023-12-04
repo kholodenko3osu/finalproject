@@ -79,8 +79,6 @@ function draw() {
     circle(locX, locY, 100);
   } 
 
-  print(mouseY);
-  print("test");
   canvas.mouseOver(flashlight);
   canvas.mouseOut(flashlight);
   noStroke();
