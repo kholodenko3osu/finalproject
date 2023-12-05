@@ -1,10 +1,10 @@
-document.querySelector(".addLinks").addEventListener("keyup", event => {
+document.querySelector(".addLinks").addEventListener("keyup", event => { //Enter Key
   if(event.key !== "Enter") return; // Use `.key` instead.
   document.querySelector(".linkadd").click(); // Things you want to do.
   event.preventDefault(); // No need to `return false;`.
 });
 
-var element = document.querySelector('.fade-out-element'); 
+var element = document.querySelector('.fade-out-element'); //Initial Screen
 function fadeOut(el) {
   setTimeout(() => {
     var opacity = 1; // Initial opacity
@@ -20,8 +20,8 @@ function fadeOut(el) {
   }, 2500)
 
 }
-fadeOut(element);
 
+fadeOut(element);
 
 // Passcode Protection - passwords: projects, weekly, baubles, absolution. Stop sneaking around here!
 function protectpasscode() {
@@ -67,8 +67,9 @@ window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
 });
 
-/////////////////////////////////////////
-
+///////////////////////////////////////// p5js below
+const topColor = color(20, 20, 20);
+const bottomColor = color(0, 0, 0);
 var canvas;
 var mySound;
 var mouseVal = false;
@@ -80,10 +81,9 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas (windowWidth, windowHeight+300, WEBGL);
+  canvas = createCanvas (windowWidth, windowHeight+100, WEBGL);
   canvas.position(0,200);
 }
-
 
 function draw() {
   background(0);
@@ -97,21 +97,22 @@ function draw() {
     fill(255,255,255,5);
     circle(locX, locY, 250);
     fill(255,255,255,10);
-    circle(locX, locY, 100);
+    circle(locX, locY, 200);
+    noStroke(); 
   } 
 
-  canvas.mouseOver(flashlight);
-  canvas.mouseOut(flashlight);
-  noStroke();
-   
+  flashlight();
+
+
+
 }
 
 // Only activates mouseClicked() function if mouse is over canvas element
 function flashlight() { 
   if (mouseY > 0) {
-    hover = false;
-  } else {
     hover = true;
+  } else {
+    hover = false;
   }
 }
 
@@ -119,13 +120,13 @@ function mouseClicked() {
   if (hover == true) {
   if (mouseVal == true) {
     mouseVal = false;
-} else {
+  } else {
   mouseVal = true;
-}
-print(mouseVal); 
+  }
+  print(mouseVal); 
 
-mySound.play();
-}
+  mySound.play();
+  }
 }
 
 function windowResized() {
