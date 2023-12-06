@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly: I</title>
+    
+    <style>
+ * {
+   background-image: linear-gradient(rgb(22, 88, 185),rgb(103, 34, 214));
+
+ }
+ body{
+      font-size:16px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(108, 165, 212);
+      text-shadow: 0 0 5px #2c132e, 0 0 10px #07436b;
+      word-wrap: break-word;
+      background-image: linear-gradient(rgb(22, 88, 185),rgb(103, 34, 214));
+
+   }
+   .weird{
+    font-size:16px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(108, 165, 212);
+      text-shadow: 0 0 5px #2c132e, 0 0 10px #07436b;
+      word-wrap: break-word;
+    
+   }
+   .marquee{
+    color: rgb(252, 30, 30);
+
+   }
+   .psst{
+    font-size: 12px;    
+   }
+ 
+    </style>
+
+</head>
+<body>
+<pre class="weird">This week I spent most of my programming time working on the final project and coming up with new ideas.
+The biggest thing I've been trying to fix is the flashlight effect from last time. For the draft, I basically just "lifted" someone else's code, modified it a tiny bit, and credited them.
+
+Now that I have access to p5.js, I'm probably going to create the flashlight effect through there. Currently, I have two ideas:
+
+<em>1.</em> Using the <a href="https://p5js.org/reference/#/p5/spotLight">spotLight()</a> function on a black rectangle that is the same size as the canvas; If the text is the same color as the rectangle, the spotlight should reveal the hidden messages.
+<em>2.</em> Using the <a href="https://p5js.org/reference/#/p5/erase">erase()</a> function to delete parts of a black rectangle (or maybe just the canvas itself) to expose the text underneath.
+
+Option 1 seems more reasonable, but because some of my text is glowy it might be tricky. Option 2 is a bit more scuffed but it's the only other thing I can think of.
+
+Other than that, I also want to clean up some of the UI and other elements across the website. For instance, the input box and button are currently using the default styling, so I should <em>prooobably</em> get around to changing that.
+I also wanted to make it so that the "enter" key activates the input box as well but idk how to do that yet. I'll probably have to look up some js for that.
+I've thought about how I would hint that the user should scroll down on the webpage, and a gradient seems to be the most reasonable idea, but a simple css gradient really doesn't work with p5js canvases. I might just scrap the idea entirely.
+I can always just tell the reader to, like, scroll lmao
+
+Finally, it's a little troll but I wanted to see what happens if I just apply a gradient to *everything*. Apparently stuff wrapped in specific tags also gets a unique gradient applied to it. Look at the links or emphasized text for instance. Pretty cool!
+Also it wraps the entire gradient around repeatedly. I could fix it... <span class="psst">but im not going to</span>

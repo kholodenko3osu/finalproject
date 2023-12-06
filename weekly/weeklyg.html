@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly: G</title>
+    
+    <style>
+   body{
+      font-size:16px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(108, 165, 212);
+      background-image: linear-gradient(rgb(19, 9, 9),rgb(139, 214, 162));
+      text-shadow: 0 0 5px #2c132e, 0 0 10px #07436b;
+      word-wrap: break-word;
+   }
+   .weird{
+    font-size:16px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(108, 165, 212);
+      text-shadow: 0 0 5px #2c132e, 0 0 10px #07436b;
+      word-wrap: break-word;
+    
+   }
+   .marquee{
+    color: rgb(252, 30, 30);
+
+   }
+   .psst{
+    font-size: 12px;    
+   }
+ 
+    </style>
+
+</head>
+<body>
+<pre class="weird">This week was spent playing setting up and playing around with P5.JS a bit. 
+It's really cool to finally be working on JavaScript in a more structured class assignment, especially since I can actually <em>do stuff myself</em> rather than just patching and fixing code I find online.
+
+Looking at all of the examples is really cool as well! I already have ideas for how to improve my website, and maybe even make my own custom flashlight program.
+As well as just the P5.JS stuff, I've also decided that I'm gonna try to format these weeklys in HTML slightly differently while trying to achieve a similar look.
+For instance, I'm using just a single <em>pre</em> tag for this weekly while other weeklies had a bunch of <em>p</em> tags line by line, and I have to say: this is soo much easier.
+
+
+<em>Pre</em> tags are weird tho. 
+
+Like, I had to make a custom class cuz the tag didn't automatically adopt the body styling parameters. The <em>P</em> tag didn't have this problem, so it's interesting to see how different methods work better and worse in certain situations.
+Overall, tho, this is much easier lol. All I need is one class and one tag, and boom I can start typing and just press enter for a new line rather than making a whole new tag.
+
+
+
+
+
+It also means I can just press enter multiple times instead of using a <em>br</em> tag.
+
+
+
+
+
+I wonder if different web browsers utilize the <em>pre</em> tag differently? My experience with web programming so far has shown that different browsers can take the same commands and spit out different results.
+I brought this up during the analysis of my website - how Edge didn't seem to work very well with it, while Chrome and Firefox did.
+If you're making an experimental website, is it better to prioritize compatability or complexity when faced with that decision? How much time do you spend looking for alternative ways to do the same thing so that it works across multiple browsers?
+I had to do that for the Poem Project. Firefox interpreted the <em>marquee</em> tag correctly (despite being deprecated) while Chrome very much hated it. I assume it's deprecated because it's more of a styling thing than layout.
+
+Let's do a little test here:
+Below this line, there should be two different portions of text. One of them is a single line with a slow marquee HTML effect to the right, while the other is a faster marquee consisting of multiple lines going to the left.
+</pre>
+<hr>
+<marquee class="marquee" behavior="scroll" direction="right" scrolldelay="60">Line One</marquee>
+<pre><marquee class="marquee" behavior="scroll" direction="left" scrolldelay="15" truespeed>
+Huh?
+Hwa?
+¿Que?
+Quid?
+</marquee></pre>
+<hr>
+
+<pre class="weird">What does it look like for your browser? Are the four questions split onto four lines (like in Firefox) or are they all on one line (like Edge/Chrome)?
+
+Even simpler things like the color gradient for the page seem to differ based on browser! Like, the actual colors are just. different? Maybe I'm going crazy, but it feels like something's off.
+
+Either way, thinking about compatability is pretty interesting for me. I'm interested to see if P5.JS has any compatability issues that I'll need to address in my programs.
+For instance, if I use it to make a flashlight, will it work differently depending on the browser like it does with the current code?
+
+Also I just noticed that the <em>pre</em> tag doesn't wrap the sentence down a line once the text reaches the end of the page, which makes sense actually. huh.
+
+</pre>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
