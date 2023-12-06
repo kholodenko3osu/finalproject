@@ -66,6 +66,9 @@ html{
  display: block;
 }
 
+.gradient {
+  background-image: linear-gradient(rgb(10,10,10), black);
+}
 .galaxy {
   background-image: url('galaxy.gif'); 
   color: rgb(238, 238, 238);
